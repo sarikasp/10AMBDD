@@ -25,3 +25,6 @@ module.exports = (on, config) => {
 
 
 
+// Cypress.on('uncaught:exception',function(error,runnable){
+//   return false
+// })
