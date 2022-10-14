@@ -14,6 +14,7 @@ When('Enter the Username and Password', (dataTable) => {
     })
 })
 
+
 Then('Click on Submit button', () => {
     cy.log('then')
     cy.get('[name="login"]').click()
@@ -30,6 +31,13 @@ When('Enter the {string} and {string}', (Username, Password) => {
         cy.log('when')
         cy.get('#username').type(Username)
         cy.get('#password').type(Password)
- 
 })
 
+And('Validate the Dashborad Text {string}', (Username) => {
+    cy.log(Username)
+    let user = Username.split("@")[0]
+    cy.log(user)
+    cy.get('.is-active> a').should('have.text', "Dashboard")
+    cy.get('[class="woocommerce-MyAccount-content"] p strong').should('have.text', user)
+
+})

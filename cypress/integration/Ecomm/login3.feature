@@ -13,10 +13,10 @@ Feature: Validate the Practice Automation Site for login functionality
         Given Visit Practice Automation site for login
         When Enter the "<Username>" and "<Password>"
         Then Click on Submit button
-        And Validate the Dashborad Text
+        And Validate the Dashborad Text "<Username>"
 
         Examples:
             | Username        | Password    |
             | sarika@test.com | @Minskole12 |
             | gauri@test.com  | 12Minskole@ |
-            | pratik@test.com | @Minskole12 |
+            | chinmay@test.com | @Minskole12 | 
