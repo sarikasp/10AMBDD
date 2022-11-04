@@ -13,8 +13,6 @@ class HomePage {
         submitBtn : 'button',
     }
 
-
-  
     vistUrl() {
         cy.visit(this.selector.EcommUrl)
     }
@@ -66,10 +64,6 @@ class HomePage {
     clickOnElement(element){
         cy.get(element).click()
     }
-
-
-   
-  
 
 }
 
